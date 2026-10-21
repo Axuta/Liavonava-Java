@@ -9,15 +9,17 @@ Traineeship task solution for QA Automation position (Java 11, TestNG).
 - **Name Greeting:** If the entered name matches "John" (case-sensitive), output "Hello, John"; otherwise, output "There is no such name".
 - **Array Filtering:** Given a numeric array as input, output elements that are multiples of 3.
 
-### 2. Bracket Sequence Analysis
+### 2. Bracket Sequence
 **Sequence:** `[((())()(())]]`
 - **Is it correct?** No.
 - **Reason:** After the last closing parenthesis, one round bracket remains unclosed on the stack. The next character is a closing square bracket `]`, which does not match the unclosed `(` on top of the stack, and the sequence also ends with an extra unmatched `]`.
 - **Correction:** Replace the first of the two closing square brackets with a closing parenthesis. The corrected sequence `[((())()(()))]` is valid: the `)` closes the remaining round bracket, and the final `]` closes the opening square bracket, leaving the stack empty.
+
 ## Tech Stack
 - **Language:** Java 11
 - **Build Tool:** Maven
-- **Testing Framework:** TestNG 7.10.2
+- **Testing Framework:** TestNG 7.12.0
+- **Logging:** SLF4J (slf4j-simple)
 
 ## Project Structure
 
@@ -38,7 +40,7 @@ src/test/java/com/lyavonova/task
 ### Run the Console Application
 Using Maven:
 ```bash
-mvn compile exec:java -Dexec.mainClass=com.lyavonova.task.ConsoleApp
+mvn compile exec:java -Dexec.mainClass=com.liavonava.task.ConsoleApp
 ```
 Or simply right-click `ConsoleApp.java` in IntelliJ IDEA and select **Run**.
 
